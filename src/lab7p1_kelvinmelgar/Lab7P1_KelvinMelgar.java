@@ -48,13 +48,21 @@ public class Lab7P1_KelvinMelgar {
                     
                     int[][] matriz = lecturaMatriz(filCol[0], filCol[1]);
                     
-                    int[] result = numeroMagico(matriz);
-                    
-                    JOptionPane.showMessageDialog(null, "Matriz\n" + 
-                                imprimir(matriz) + "\nSuma exteriores: " + result[0] +
-                                "\nMultiplicacion interiores: " + result[1] +
-                                "\nNumero Magico: " + result[2] + "\n"
-                                , "Numero Magico", 1);
+                    if (filCol[0] != filCol[1]) {
+                        int[] result = numeroMagico(matriz);
+
+                        JOptionPane.showMessageDialog(null, "Matriz\n"
+                                + imprimir(matriz) + "\nSuma exteriores: " + result[0]
+                                + "\nMultiplicacion interiores: " + result[1]
+                                + "\nNumero Magico: " + result[2] + "\n",
+                                 "Numero Magico", 1);
+
+                    } else {
+                        JOptionPane.showMessageDialog(null,
+                                "\nLa matriz no puede ser cuadrada\n\n",
+                                "Error", 0);
+                    }
+
                     
                     
                 }
